@@ -25,6 +25,8 @@ exports.createHospital= async (req, res, next)=>{
     res.status(200).json({success: true, data:hospital});
 };
 
+//test
+
 exports.updateHospitals= async (req, res, next)=>{
     try{
         const hospital = await Hospital.findByIdAndUpdate(req.params.id, req.body, {
