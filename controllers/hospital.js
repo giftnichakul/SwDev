@@ -1,5 +1,7 @@
 const Hospital = require('../models/Hospital');
 
+//test again yay
+
 exports.getHospitals= async (req, res, next)=>{
     try{
         const hospitals = await Hospital.find();
