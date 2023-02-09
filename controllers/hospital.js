@@ -16,7 +16,7 @@ exports.getHospital= async (req, res, next)=>{
         const hospital = await Hospital.findById(req.params.id);
         if(!hospital) return res.status(200).json({success: false});
 
-        res.status(400).json({success:true, data:hospital});
+        res.status(200).json({success:true, data:hospital});
     }catch(err){
         res.status(400).json({success:false});
     }
@@ -27,7 +27,6 @@ exports.createHospital= async (req, res, next)=>{
     res.status(200).json({success: true, data:hospital});
 };
 
-//test
 
 exports.updateHospitals= async (req, res, next)=>{
     try{
