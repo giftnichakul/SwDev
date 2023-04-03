@@ -13,6 +13,11 @@ const sendTokenResponse = (user, statusCode, res) =>{
 
     res.status(statusCode).cookie('token', token, options).json({
         succes:true,
+        //add frontend
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        //end frontend
         token
     })
 }

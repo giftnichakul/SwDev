@@ -14,7 +14,10 @@ const hospitals = require('./routes/hospital');
 const auth = require('./routes/auth');
 const appointment = require('./routes/appointment');
 
+const cors = require("cors");
 const app = express();
+
+app.use(cors());
 //Body parser
 app.use(express.json());
 
