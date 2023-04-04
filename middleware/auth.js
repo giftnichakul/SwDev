@@ -9,7 +9,7 @@ exports.protect = async (req, res, next)=>{
     }
 
     //Make sure token exists
-    if(!token) return res.status(401).json({success:false, msg: "Not authorize to access this route"});
+    if(!token || token=="null") return res.status(401).json({success:false, msg: "Not authorize to access this route"});
 
     try{
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
